@@ -1,0 +1,107 @@
+/* Reset and basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+}
+
+/* Video container styles */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Place the video behind other content */
+}
+
+/* Video styles */
+#video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire container */
+    opacity: 0.5; /* Add transparency to the video background */
+}
+
+/* Header and Navigation styles */
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background to improve readability */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative; /* Ensure header stays above video */
+    z-index: 1; /* Place header above video */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid transparent; /* Transparent border by default */
+    padding: 5px 10px; /* Padding around links */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+header nav ul li a:hover {
+    border-color: #00f; /* Blue border on hover */
+}
+
+/* Section styles */
+.section-box {
+    padding: 2rem;
+    text-align: center;
+    position: relative; /* Ensure sections stay above video */
+    z-index: 1; /* Place sections above video */
+    margin: 2rem;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+}
+
+/* Specific section styling */
+.section-box.red-frame {
+    border: 5px solid #F44336; /* Red frame for Links section */
+    font-size: 1.5rem; /* Larger font size for Links section */
+}
+
+.section-box.red-frame ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section-box.red-frame ul li {
+    margin: 1rem 0;
+    font-size: 1.5rem; /* Larger font size for list items */
+}
+
+.section-box.red-frame ul li a {
+    text-decoration: none;
+    color: #333; /* Text color */
+    font-weight: bold;
+}
+
+/* Links inside sections */
+.section-box a {
+    color: inherit; /* Inherit text color */
+    text-decoration: none;
+    border-bottom: 1px dashed; /* Dashed underline */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.section-box a:hover {
+    border-color: currentColor; /* Use current text color for border */
+}
